@@ -8,7 +8,7 @@ public class TesteEscrita {
 
 //        FileOutputStream fo = new FileOutputStream("teste.txt");
 //
-//        OutputStreamWriter os = new OutputStreamWriter(fo);       ESTE É UM DOS METODOS NÃO TÃO BOM ASSIM
+//        OutputStreamWriter os = new OutputStreamWriter(fo);       ESTE É UM DOS METODOS, NÃO TÃO BOM ASSIM
 //
 //        BufferedWriter bw = new BufferedWriter(os);
 //----------------------------------------------------------------------------------
