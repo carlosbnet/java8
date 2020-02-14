@@ -13,7 +13,6 @@ public class TesteScanner {
 
         Scanner file = new Scanner(new File("infopreco.csv")); // Pega o arquivo como um todo
 
-
         System.out.println("|  CNPJ                    |  NOME                                                          |  ENDEREÇO                                                          |   NUMERO             |    COMPLEMENTO                                                |     BAIRRO                                              |     CIDADE                              |   UF               |     PRODUTO                            |   VALOR DA VENDA  |    DATA CADASTRO        |");
         while(file.hasNextLine()){
 
@@ -51,7 +50,7 @@ public class TesteScanner {
 
 
             }else {
-
+        break;
             }
 
 
