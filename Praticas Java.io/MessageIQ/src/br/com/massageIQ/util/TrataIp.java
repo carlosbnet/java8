@@ -8,7 +8,7 @@ import java.util.List;
 public class TrataIp {
 
 
-    String ip = null;
+   private String ip = null;
 
     //busca pelo ip da maquina atual pra que com base nele, procure outros na rede
 

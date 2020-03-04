@@ -1,25 +1,26 @@
 package br.com.massageIQ.util;
 
-import java.net.InetSocketAddress;
-import java.net.Socket;
-import java.net.SocketAddress;
-import java.net.SocketException;
+import javax.swing.*;
+import java.io.IOException;
+import java.net.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class BuscaIp {
 
-    Socket clientConnect = null;
-    List clientList = null;
-    String[] clientIp = null;
+    Socket clientConnect;
+    ArrayList clientList = new ArrayList();
+    String[] clientIp;
 
 
     TrataIp trataIp = new TrataIp();
 
 
 
-  public   BuscaIp() throws SocketException {
+  public   BuscaIp() throws IOException {
 
         this.clientIp = trataIp.getIp().split("\\.");
+
 
     }
 
@@ -27,7 +28,7 @@ public class BuscaIp {
     public void getClientList(){
 
 
-        for (int x = 0; x < 255; x++) {
+        for (int x = 100; x < 120; x++) {
 
 
             Integer endLocal = Integer.parseInt(clientIp[3]);
@@ -47,10 +48,11 @@ public class BuscaIp {
 
                 client.connect(sktAdrress,timeOut);
 
-               if (client.isConnected()){ // && ip.compareTo(trataIp.getIp()) != 1
+               if (client.isConnected() && !ip.equals(trataIp.getIp())){ //
                     System.out.println("Um novo amigo foi encontrado: "+ ip );
                     clientList.add(ip);
                     client.close();
+
                 }
 
 
@@ -67,7 +69,11 @@ public class BuscaIp {
     }
 
 
+    public ArrayList<String> getClients(){
 
+      return this.clientList;
+
+    }
 
 
 
