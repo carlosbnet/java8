@@ -1,6 +1,5 @@
 <html>
 <body>
-<h2>Minha Loja Web</h2>
+<h2>Hello World!</h2>
 </body>
-
 </html>

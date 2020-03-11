@@ -16,6 +16,7 @@ public class ContatoServelt extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+
         new CPF("22265926302").isValido();
 
         new Produto("Salame",1.5);
