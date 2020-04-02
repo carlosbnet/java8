@@ -1,0 +1,269 @@
+
+
+.color-red{
+    color: brown;
+}
+
+.text-black{
+    color: black;
+}
+
+.btn_width{
+    width: 110px;
+    height: 40px;
+}
+
+body{
+   
+    background-image:url("../images/thumb-1920-447889.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    background-color: #cccccc;
+    height: 100%;
+    width: 100%;
+}
+
+.login-form{
+   
+    border: solid 1px white;
+    border-radius: 15px;
+    width:550px; /* Valor da Largura */
+    height:350px; /* Valor da Altura */
+    background:#ffffff;
+    margin-top: 170px;
+    margin-left: 280px;
+    color:#fff;
+    
+   
+    
+}
+.borda{
+    border: 10px solid black;
+}
+
+@supports (-moz-appearance:none) {
+   #teste{
+    position: absolute;
+    margin-top: -330px;
+    width: 118px;
+    height: 109px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    padding-top: 22px;
+    padding-left: 27px;
+   }
+}
+
+
+.cicle{
+    
+    position: absolute;
+    margin-top: -165px;
+    width: 118px;
+    height: 109px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    padding-top: 22px;
+    padding-left: 27px;
+    
+}
+
+#forgot{
+    font-size: 15px;
+}
+
+.icon{
+
+    font-size: 52px;
+    color: rgba(89, 151, 245, 0.925);
+}
+
+
+#buttonSign{
+    width: 200px;
+    height: 40px;
+}
+
+
+
+
+
+
+
+@media (max-width: 320px) { 
+
+    .login-form{
+   
+        border: solid 1px white;
+        border-radius: 15px;
+        width:270px; /* Valor da Largura */
+        height:310px; /* Valor da Altura */
+        background:#ffffff;
+        margin-top: 100px;
+        margin-left: 13px;
+        margin-bottom: 150px;
+        color:#fff;
+          
+    }
+
+
+    #buttonSign{
+        width: 100px;
+        height: 40px;
+    }
+
+    #forgot{
+        
+        font-size: 12px;
+    }
+
+
+    .cicle{
+    
+        position: absolute;
+        margin-top: -155px;
+        width: 85px;
+        height: 89px;
+        border-radius: 50%;
+        background: rgb(255, 255, 255);
+        padding-top: 12px;
+        padding-left: 25px;
+        
+    }
+
+
+    @supports (-moz-appearance:none) {
+        #teste{
+            position: absolute;
+            margin-top: -320px;
+            width: 85px;
+            height: 89px;
+            border-radius: 50%;
+            background: rgb(255, 255, 255);
+            padding-top: 16px;
+            padding-left: 25px;
+        }
+     }
+
+
+     .icon{
+
+        font-size: 32px;
+        color: rgba(89, 151, 245, 0.925);
+    }
+
+ }
+
+
+
+
+@media (min-width: 321px) and (max-width: 575.98px){ 
+    .login-form{
+   
+        border: solid 1px white;
+        border-radius: 15px;
+        width:290px; /* Valor da Largura */
+        height:320px; /* Valor da Altura */
+        background:#ffffff;
+        margin-top: 110px;
+        margin-left: 35px;
+        margin-bottom: 245px;
+        color:#fff;
+          
+    }
+
+
+    #buttonSign{
+        width: 100px;
+        height: 40px;
+    }
+
+    #forgot{
+        
+        font-size: 12px;
+    }
+
+
+    .cicle{
+    
+        position: absolute;
+        margin-top: -155px;
+        width: 85px;
+        height: 89px;
+        border-radius: 50%;
+        background: rgb(255, 255, 255);
+        padding-top: 12px;
+        padding-left: 25px;
+        
+    }
+
+
+    @supports (-moz-appearance:none) {
+        #teste{
+            position: absolute;
+            margin-top: -320px;
+            width: 85px;
+            height: 89px;
+            border-radius: 50%;
+            background: rgb(255, 255, 255);
+            padding-top: 16px;
+            padding-left: 25px;
+        }
+     }
+
+
+     .icon{
+
+        font-size: 32px;
+        color: rgba(89, 151, 245, 0.925);
+    }
+
+ }
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .login-form{
+   
+        border: solid 1px white;
+        border-radius: 15px;
+        width:350px; /* Valor da Largura */
+        height:350px; /* Valor da Altura */
+        background:#ffffff;
+        margin-top: 170px;
+        margin-left: 90px;
+        color:#fff;
+           
+    }
+
+    #buttonSign{
+        width: 150px;
+        height: 20px;
+    }
+
+ }
+
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+
+
+
+
+
+
+
+
+    
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {  }
+
+@media (min-width: 1200px) {  }
