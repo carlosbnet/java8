@@ -16,7 +16,7 @@
     <div class="container  backCont border mt-5 p-4 ">
  
         <!-- Form Principal -->
-        <form action="" method="post">
+        <form action="/testapp?acao=post" method="post">
             <div class="text-center h2 text-bold font-weight-bold mb-4 mt-3">Cadastro de Cliente:</div>
             <div class="row ">
       
@@ -29,8 +29,8 @@
                     <input type="text" class="form-control" name="cpf" id="cpf" placeholder="Digite seu cpf">
                 </div>
                 <div class="form-group col">
-                    <label for="date">Data Nascimento</label>
-                    <input type="date" class="form-control" name="date" id="date">
+                    <label for="date_of_birth">Data Nascimento</label>
+                    <input type="date" class="form-control" name="date_of_birth" id="date">
                 </div>
             </div>
            
@@ -46,7 +46,7 @@
 
                 <div class="form-group col-1">
                     <label for="logr_numero">N: </label>
-                    <input type="text" class="form-control" name="logr_numero" id="logr_numero" placeholder="num da casa">
+                    <input type="number" class="form-control" name="logr_numero" id="logr_numero" placeholder="num da casa">
                 </div>  
                 
                 <div class="form-group col">
@@ -56,7 +56,7 @@
 
                 <div class="form-group col-2">
                     <label for="logr_estado">Estado</label>
-                    <select class="form-control" name="estado" id="estado">
+                    <select class="form-control" name="logr_estado" id="logr_cidade">
                         <option value="MA">MA</option>
                         <option value="SP">SP</option>
                         <option value="RJ">RJ</option>

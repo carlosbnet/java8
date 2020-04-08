@@ -1,36 +1,26 @@
-package Model;
+package br.com.startsl.appcad.Model;
 
 import java.util.Date;
 
 public class Client {
 
-	private int idClient;
-	private String name = null;
-	private Date date_of_birth = null;
-	private String cpf = null;
-	private String telephone = null;
-	private String email = null;
-	private Address address = null;
+	private Integer idClient;
+	private String name;
+	private Date date_of_birth;
+	private String cpf;
+	private String telephone;
+	private String email;
+	private Address address;
 	
 	
-	public Client(String name, Date date_of_birth, String cpf, String telephone, String email, Address address) {
-	
-		this.name = name;
-		this.date_of_birth = date_of_birth;
-		this.cpf = cpf;
-		this.telephone = telephone;
-		this.email = email;
-		this.address = address;
-		
-	}
 
 
-	public int getIdClient() {
+	public Integer getIdClient() {
 		return idClient;
 	}
 
 
-	public void setIdClient(int idClient) {
+	public void setIdClient(Integer idClient) {
 		this.idClient = idClient;
 	}
 
@@ -92,13 +82,16 @@ public class Client {
 
 	public void setAddress(Address address) {
 		this.address = address;
+		
 	}
+
+
 	
-	
-	
-	
-	
-	
+	@Override
+	public String toString() {
+			
+		return "ID:"+getIdClient()+",Nome:"+getName()+",CPF: "+getCpf()+" Endereço: "+getAddress().getLogr_estado();
+	}
 	
 	
 }
