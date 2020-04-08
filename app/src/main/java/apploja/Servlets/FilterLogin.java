@@ -18,7 +18,10 @@ public class FilterLogin implements Filter {
 			throws IOException, ServletException {
 		
 			
-	 
+	 //primeiro temos que fazer um cast para o tipo HttpServletRequest e HttpServletresponse
+	//para pega o valor da acao e daí podemos pegar outras informações como o ID da sessão, e com ela podemos verificar se nosso usuario esta logado ou não
+	//e até mesmo redirecionar para devidas paginas caso não esteje logado
+		
 	       HttpServletRequest request = (HttpServletRequest) servletRequest;
 	        HttpServletResponse response = (HttpServletResponse) servletResponse;
 

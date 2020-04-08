@@ -26,7 +26,7 @@ package apploja.Servlets;
 	@WebFilter("/entrada")
 	public class Filtro implements Filter {
 
-	    
+	    //Filtro criado para veirificar o tempo de execulção 
 	    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain chain)
 	            throws IOException, ServletException {
 
@@ -40,7 +40,8 @@ package apploja.Servlets;
 
 	        String acao = request.getParameter("acao");
 
-	        chain.doFilter(request, response);
+	        chain.doFilter(request, response); // Este metodo é usado para dar continuidade ao caminho que o sistema tem que fazer, ou simplemente continuar seu destino
+	        //Temos que informar os argumentos request e response, pois os mesmo vão ser usados mais adiante em outros metodos
    
 	        long depois = System.currentTimeMillis();
 	        System.out.println("Tempo de execução da acao " + acao + " -> " + (depois - antes));

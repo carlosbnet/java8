@@ -1,31 +1,17 @@
-package Model;
+package br.com.startsl.appcad.Model;
 
 public class Address {
 
 	private int id_client;
-	private String logr_rua = null;
-	private String logr_bairro = null;
-	private int logr_numero;
-	private String logr_cidade = null;
-	private String logr_estado = null;
+	private String logr_rua;
+	private String logr_bairro;
+	private Integer logr_numero;
+	private String logr_cidade;
+	private String logr_estado;
 	
 	
 	
 	
-	public Address( String logr_rua, String logr_bairro, int logr_numero, String logr_cidade,
-			String logr_estado) {
-		super();
-		
-		this.logr_rua = logr_rua;
-		this.logr_bairro = logr_bairro;
-		this.logr_numero = logr_numero;
-		this.logr_cidade = logr_cidade;
-		this.logr_estado = logr_estado;
-		
-	}
-
-
-
 
 	public int getId_client() {
 		return id_client;
@@ -69,14 +55,14 @@ public class Address {
 
 
 
-	public int getLogr_numero() {
+	public Integer getLogr_numero() {
 		return logr_numero;
 	}
 
 
 
 
-	public void setLogr_numero(int logr_numero) {
+	public void setLogr_numero(Integer logr_numero) {
 		this.logr_numero = logr_numero;
 	}
 

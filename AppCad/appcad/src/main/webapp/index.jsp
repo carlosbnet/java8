@@ -23,18 +23,18 @@
 
                 <div  id="teste" class="cicle"><i class="icon fas fa-user-friends " ></i></div>
                 <div class="col-8">
-                <form class="text-black" action="" method="post">
+                <form class="text-black" action="/testapp?acao=login" method="post">
 
                                 <div class="row  mt-3 ">
                                     <div class="col-12  form-group">
-                                        <label for="email">Email:</label>
-                                        <input type="email" class="form-control" name="email" id="email">
+                                        <label for="user">User:</label>
+                                        <input type="text" class="form-control" name="login" id="email">
                                     </div>
                                 </div>
                                 <div class="row ">
                                     <div class="col-12 form-group ">
-                                        <label for="pwd">Password</label>
-                                        <input type="password" class="form-control" name="pwd" id="pwd">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control" name="password" id="pwd">
                                     </div>
                                 </div>
                                 <div class="row text-center mt-2">
