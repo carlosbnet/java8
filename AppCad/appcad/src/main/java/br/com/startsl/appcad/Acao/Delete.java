@@ -23,7 +23,7 @@ public class Delete implements Acao {
 
 		clientDAO.delete(id);
 
-		return null;
+		return "redirect:testapp?acao=getlist";
 	}
 
 }

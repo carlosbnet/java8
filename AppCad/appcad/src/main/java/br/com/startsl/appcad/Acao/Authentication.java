@@ -36,12 +36,12 @@ public class Authentication implements Acao {
 			if (user.getUser().equals(login) && user.getPassword().equals(password)) {
 
 				session.setAttribute("userLog", user.getId());
-
-				return "forward:home.jsp";
+					
+				return "redirect:testapp?acao=getlist";
 			}
 		}
 
-		return null;
+		return "redirect:index.jsp";
 	}
 
 }

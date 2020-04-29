@@ -28,7 +28,7 @@ public class GetList implements Acao {
 			request.setAttribute("clients", clients);
 			
 			
-		return "forward:listclients.jsp";
+		return "forward:home.jsp";
 	}
 
 }

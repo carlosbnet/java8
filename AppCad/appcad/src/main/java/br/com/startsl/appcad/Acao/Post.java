@@ -75,13 +75,14 @@ public class Post implements Acao {
 
 		ClientDAO clientDao = new ClientDAO();
 		
+		System.out.println("Entrou");
 		
 		//Manda
 
 			clientDao.createClient(client);
 		
 
-		return "forword:home.jsp";
+		return "forward:home.jsp";
 	}
 
 }
