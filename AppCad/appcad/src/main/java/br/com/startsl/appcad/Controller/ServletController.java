@@ -11,8 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import br.com.startsl.appcad.Acao.Authentication;
 import br.com.startsl.appcad.Acao.Delete;
+import br.com.startsl.appcad.Acao.DisplayRegister;
 import br.com.startsl.appcad.Acao.Get;
 import br.com.startsl.appcad.Acao.GetList;
+import br.com.startsl.appcad.Acao.Logout;
 import br.com.startsl.appcad.Acao.Post;
 import br.com.startsl.appcad.Acao.Update;
 
@@ -27,6 +29,7 @@ public class ServletController extends HttpServlet {
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
+	//Pode ser aprimorado, ser feito de uma forma mais elegante
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -35,14 +38,27 @@ public class ServletController extends HttpServlet {
 		String redirect=null;
 		
 		switch (acao) {
+		
+		
+		case "displayregister":
+			
+			try {
+				redirect = new DisplayRegister().execute(request, response);
+			} catch (ServletException | IOException | SQLException | ParseException e4) {
+				// TODO Auto-generated catch block
+				e4.printStackTrace();
+			}
+			
+		break;
+		
 
 		case "post":
 
 			try {
 				redirect = new Post().execute(request, response);
-			} catch (ServletException | IOException | SQLException | ParseException e1) {
+			} catch (ServletException | IOException | SQLException | ParseException e3) {
 				// TODO Auto-generated catch block
-				e1.printStackTrace();
+				e3.printStackTrace();
 			}
 
 			break;
@@ -100,6 +116,15 @@ public class ServletController extends HttpServlet {
 			}
 			
 			break;
+			
+		case "logout":
+			
+			try {
+				redirect = new Logout().execute(request, response);
+			} catch (ServletException | IOException | SQLException | ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			
 
 		default:

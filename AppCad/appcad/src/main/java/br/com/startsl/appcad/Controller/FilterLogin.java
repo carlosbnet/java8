@@ -25,20 +25,22 @@ public class FilterLogin implements Filter {
 		String acao = request.getParameter("acao");
 		
 		
-		//Se o cokkie estiver setado entao na logica ele tem que esta logado
+		//Se o cookie estiver setado entao na logica ele tem que esta logado
 		
 		HttpSession session = request.getSession();
 		
-		boolean isLog = (session.getAttribute("userLog") == null);
+		boolean isNotLog = (session.getAttribute("userLog") == null);
 		
 		//temos que fazer um redirecionamento toda vez que indicar que nao esta logado
 		//vamos trabalhar no conceito de permissão quais serão as paginas que ele pode usar
 		
 		boolean isProtected = !(acao.equals("login"));
 		
+		System.out.println(isNotLog);
+		System.out.println(isProtected);
+			
 		
-		
-		if(isLog && isProtected) {
+		if(isNotLog & isProtected) {
 
 		    response.sendRedirect("index.jsp");
 		   
