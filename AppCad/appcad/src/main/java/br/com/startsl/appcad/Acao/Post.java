@@ -82,7 +82,7 @@ public class Post implements Acao {
 			clientDao.createClient(client);
 		
 
-		return "forward:home.jsp";
+			return "redirect:testapp?acao=getlist";
 	}
 
 }

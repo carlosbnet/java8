@@ -42,7 +42,6 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="/testapp?acao=displayregister">Cadastrar</a>
-                        <a class="dropdown-item" href="/testapp?acao=displayalterregister">Alterar</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div>
@@ -83,7 +82,7 @@
                     <td><fmt:formatDate value="${client.date_of_birth}" pattern="dd/MM/yyyy"/> </td>
                     <td>${client.address.logr_numero}</td>
                     <td>${client.address.logr_bairro}</td>
-                    <td><i class="fas fa-trash-alt fa-2x mr-2 text-danger"></i> <i class="fas fa-2x fa-user-edit text-primary"></i></td>
+                    <td><a href="/testapp?acao=delete&id=${client.idClient}"><i class="fas fa-trash-alt fa-2x mr-2 text-danger"></i></a> <a href="/testapp?acao=get&id=${client.idClient}"><i class="fas fa-2x fa-user-edit text-primary"></i></a></td>
                 </tr>
                 </c:forEach>
             </tbody>

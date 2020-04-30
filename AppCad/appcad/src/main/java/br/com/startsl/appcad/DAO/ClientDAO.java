@@ -103,8 +103,9 @@ public class ClientDAO {
 			client.setName(rs.getString("nome"));
 			client.setCpf(rs.getString("cpf"));
 			client.setDate_of_birth(rs.getDate("data_nascimento"));
-			client.setEmail("email");
-			client.setTelephone("telefone");
+			client.setEmail(rs.getString("email"));
+			client.setTelephone(rs.getString("telefone"));
+			client.setIdClient(idClient);
 
 			ps.close();
 
@@ -200,7 +201,7 @@ public class ClientDAO {
 
 		addressDAO.updateAddress(client.getIdClient(), client.getAddress());
 
-		System.out.println("Cadastro de Cliente");
+		System.out.println("Update do Cliente");
 
 	}
 
