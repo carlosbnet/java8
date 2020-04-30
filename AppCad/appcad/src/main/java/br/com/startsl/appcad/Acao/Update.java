@@ -74,7 +74,7 @@ public class Update implements Acao {
 		
 		System.out.println("Atualizado com sucesso!!!");
 
-		return null;
+		return "redirect:testapp?acao=getlist";
 	}
 
 }

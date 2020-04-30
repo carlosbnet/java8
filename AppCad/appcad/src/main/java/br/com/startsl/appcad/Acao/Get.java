@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.startsl.appcad.DAO.ClientDAO;
+import br.com.startsl.appcad.Model.Client;
 
 public class Get implements Acao {
 
@@ -21,9 +22,11 @@ public class Get implements Acao {
 
 		ClientDAO clientDAO = new ClientDAO();
 
-		clientDAO.get(id);
+		Client client = clientDAO.get(id);
+		
+		request.setAttribute("client", client);
 
-		return null;
+		return "forward:alterclient.jsp";
 	}
 
 }

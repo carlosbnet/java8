@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import br.com.startsl.appcad.Acao.Authentication;
 import br.com.startsl.appcad.Acao.Delete;
+import br.com.startsl.appcad.Acao.DisplayAlterClient;
 import br.com.startsl.appcad.Acao.DisplayRegister;
 import br.com.startsl.appcad.Acao.Get;
 import br.com.startsl.appcad.Acao.GetList;
@@ -83,6 +84,7 @@ public class ServletController extends HttpServlet {
 			}
 
 			break;
+			
 
 		case "update":
 
