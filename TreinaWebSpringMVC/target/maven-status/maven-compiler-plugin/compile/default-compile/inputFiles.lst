@@ -1,0 +1,15 @@
+/media/carlos/67247AD917161EE5/git/java8/TreinaWebSpringMVC/src/br/com/treinaweb/springmvc/configs/WebAppConfig.java
+/media/carlos/67247AD917161EE5/git/java8/TreinaWebSpringMVC/src/br/com/treinaweb/springmvc/controllers/HelloController.java
+/media/carlos/67247AD917161EE5/git/java8/TreinaWebSpringMVC/src/br/com/treinaweb/springmvc/dominios/Usuario.java
+/media/carlos/67247AD917161EE5/git/java8/TreinaWebSpringMVC/src/br/com/treinaweb/springmvc/repositorios/RepositorioUsuario.java
+/media/carlos/67247AD917161EE5/git/java8/TreinaWebSpringMVC/src/br/com/treinaweb/springmvc/configs/SpringConfigJpa.java
+/media/carlos/67247AD917161EE5/git/java8/TreinaWebSpringMVC/src/br/com/treinaweb/springmvc/controllers/AlbunsController.java
+/media/carlos/67247AD917161EE5/git/java8/TreinaWebSpringMVC/src/br/com/treinaweb/springmvc/controllers/UsuariosController.java
+/media/carlos/67247AD917161EE5/git/java8/TreinaWebSpringMVC/src/br/com/treinaweb/springmvc/dominios/Album.java
+/media/carlos/67247AD917161EE5/git/java8/TreinaWebSpringMVC/src/br/com/treinaweb/springmvc/controllers/HomeController.java
+/media/carlos/67247AD917161EE5/git/java8/TreinaWebSpringMVC/src/br/com/treinaweb/springmvc/controllers/MusicasController.java
+/media/carlos/67247AD917161EE5/git/java8/TreinaWebSpringMVC/src/br/com/treinaweb/springmvc/dominios/Musica.java
+/media/carlos/67247AD917161EE5/git/java8/TreinaWebSpringMVC/src/br/com/treinaweb/springmvc/security/TreinaWebUserDetailsService.java
+/media/carlos/67247AD917161EE5/git/java8/TreinaWebSpringMVC/src/br/com/treinaweb/springmvc/repositorios/RepositorioAlbum.java
+/media/carlos/67247AD917161EE5/git/java8/TreinaWebSpringMVC/src/br/com/treinaweb/springmvc/repositorios/RepositorioMusica.java
+/media/carlos/67247AD917161EE5/git/java8/TreinaWebSpringMVC/src/br/com/treinaweb/springmvc/configs/SpringConfig.java
