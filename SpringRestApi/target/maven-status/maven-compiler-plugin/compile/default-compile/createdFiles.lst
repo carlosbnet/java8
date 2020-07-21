@@ -1,0 +1,5 @@
+br/com/start/curso/exception/IdNaoValidoServiceException.class
+br/com/start/curso/resource/exception/RestExceptionHandler.class
+br/com/start/curso/exception/NaoExisteDaoException.class
+br/com/start/curso/domain/DetalheError.class
+br/com/start/curso/domain/DetalheError$Builder.class
