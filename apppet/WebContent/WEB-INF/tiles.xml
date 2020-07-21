@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC	"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+
+<tiles-definitions>
+    <definition name="layout.tiles" template="/WEB-INF/views/baselayout/base.jsp">
+        <put-attribute name="title" value=""></put-attribute>
+        <put-attribute name="header" value="/WEB-INF/views/baselayout/header.jsp"></put-attribute>
+        <put-attribute name="body" value=""></put-attribute>
+        <put-attribute name="footer" value="/WEB-INF/views/baselayout/footer.jsp"></put-attribute>
+    </definition>
+
+
+                            <!--  Animais  -->
+    <definition name="animal.adicionar.tiles" extends="layout.tiles">
+        <put-attribute name="title" value="Adicionar Novo Animal"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/animal/adicionar.jsp"></put-attribute>
+    </definition>
+
+    <definition name="animal.listar.tiles" extends="layout.tiles">
+        <put-attribute name="title" value="Lista de Animais"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/animal/listar.jsp"></put-attribute>
+    </definition>
+
+    <definition name="animal.alterar.tiles" extends="layout.tiles">
+        <put-attribute name="title" value="Alterar Animal"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/animal/alterar.jsp"></put-attribute>
+    </definition>
+
+                        <!--Medico Veterinario-->
+
+    <definition name="medico.adicionar.tiles" extends="layout.tiles">
+        <put-attribute name="title" value="Adicionar Medico Veterinario"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/medicoVeterinario/adicionar.jsp"></put-attribute>
+    </definition>
+
+    <definition name="medico.alterar.tiles" extends="layout.tiles">
+        <put-attribute name="title" value="Alterar Medico"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/medicoVeterinario/alterar.jsp"></put-attribute>
+    </definition>
+
+    <definition name="medico.listar.tiles" extends="layout.tiles">
+        <put-attribute name="title" value="Listar Medicos"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/medicoVeterinario/listar.jsp"></put-attribute>
+    </definition>
+
+
+                                <!--Prontuarios-->
+
+
+    <definition name="prontuario.adicionar.tiles" extends="layout.tiles">
+        <put-attribute name="title" value="Adicionar Protuario"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/prontuario/adicionar.jsp"></put-attribute>
+    </definition>
+
+    <definition name="prontuario.alterar.tiles" extends="layout.tiles">
+        <put-attribute name="title" value="Alterar Prontuario"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/prontuario/alterar.jsp"></put-attribute>
+    </definition>
+
+    <definition name="prontuarios.listar.tiles" extends="layout.tiles">
+        <put-attribute name="title" value="Listar Prontuarios"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/prontuario/listar.jsp"></put-attribute>
+    </definition>
+
+
+
+                          <!--Usuario-->
+
+
+    <definition name="usuario.adicionar.tiles" extends="layout.tiles">
+        <put-attribute name="title" value="Adicionar Usuario"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/usuario/adicionar.jsp"></put-attribute>
+    </definition>
+
+    <definition name="usuario.alterar.tiles" extends="layout.tiles">
+        <put-attribute name="title" value="Alterar Usuario"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/usuario/alterar.jsp"></put-attribute>
+    </definition>
+
+    <definition name="usuario.listar.tiles" extends="layout.tiles">
+        <put-attribute name="title" value="Listar Usuarios"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/usuario/listar.jsp"></put-attribute>
+    </definition>
+
+<!--          Home-->
+
+    <definition name="home.tiles" extends="layout.tiles">
+        <put-attribute name="title" value="Pagina Inicial"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/home/home.jsp"></put-attribute>
+    </definition>
+
+    <definition name="home.login.tiles"  extends="layout.tiles" >
+        <put-attribute name="title" value="Login"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/home/login.jsp"></put-attribute>
+    </definition>
+
+
+</tiles-definitions>
