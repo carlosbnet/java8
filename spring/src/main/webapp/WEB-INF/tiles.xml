@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- é obrigadotorio vim com essas definicioes -->
+<!DOCTYPE tiles-definitions PUBLIC  
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<!-- definicoes -->
+
+<tiles-definitions>
+	<definition name="layout.tiles"
+		template="/WEB-INF/views/layout/baselayout.jsp">
+		<!-- abaixo podemos colocar os componentes ou seja partes do lyaout da 
+			aplicação -->
+
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
+		
+	</definition>
+
+
+	<!-- Todos os names tem que ser colocado de acordo com o nome da seção -->
+
+
+	<definition name="album.adicionar.tiles"
+		extends="layout.tiles">
+		<put-attribute name="title" value="Adicionando um Album" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/albuns/adicionar.jsp" />
+
+	</definition>
+
+
+	<definition name="album.exibir.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Exibindo os Albuns" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/albuns/exibir.jsp" />
+	</definition>
+	
+	<definition name="album.listar.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Exibindo os Albuns" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/albuns/listar.jsp" />
+	</definition>
+	
+		<definition name="album.alterar.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Edição de Albun" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/albuns/alterar.jsp" />
+	</definition>
+	
+	
+		<definition name="musica.alterar.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Alterando Albuns" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/musicas/alterar.jsp" />
+	</definition>
+	
+	
+	
+		<definition name="musica.listar.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Listar Albuns" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/musicas/listar.jsp" />
+	</definition>
+	
+	
+	<definition name="musica.adicionar.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Adicionar Albuns" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/musicas/adicionar.jsp" />
+	</definition>
+	
+	
+		
+		<definition name="usuario.listar.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Listar Albuns" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/usuarios/listar.jsp" />
+		</definition>
+	
+	
+	<definition name="usuario.adicionar.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Adicionar Usuarios" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/usuarios/adicionar.jsp" />
+	</definition>
+
+
+	
+	<definition name="home.login.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/home/login.jsp" />
+		</definition>
+	
+	
+	<definition name="home.bemvindo.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Bem Vindo" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/usuarios/adicionar.jsp" />
+	</definition>
+
+
+
+
+</tiles-definitions> 
+ 

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:security="http://www.springframework.org/schema/security" xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jpa="http://www.springframework.org/schema/data/jpa" xmlns:tx="http://www.springframework.org/schema/tx" xsi:schemaLocation="
+	   
+			http://www.springframework.org/schema/mvc 
+			http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+			http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+			http://www.springframework.org/schema/context 
+			http://www.springframework.org/schema/context/spring-context-3.0.xsd
+			http://www.springframework.org/schema/data/jpa
+    		http://www.springframework.org/schema/data/jpa/spring-jpa-1.8.xsd
+    		http://www.springframework.org/schema/tx
+    		http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+    		http://www.springframework.org/schema/security
+          	http://www.springframework.org/schema/security/spring-security-4.2.xsd
+			">
+
+
+	<!-- apontamos para o pacote que nosso controller vai ficar, no caso onde 
+		ou quem vai direcionar para nossas action -->
+	<context:component-scan base-package="br.com.startsl.springmvc.controller"></context:component-scan>
+	<mvc:annotation-driven />
+	<mvc:resources location="/WEB-INF/resources/" mapping="/resources/**" />
+	<!--tag usada para trabalhar com os validadores do hibernate entre outros -->
+	<!-- Configuramos o reponsavel pelo retono da views de acordo com a requisição 
+		/Responsavel pela ligação entre os controlles e as views -->
+	<!-- Id do beans a ser configurado "viewResolver" -->
+
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<!-- uma url baseada na ViewResolved -->
+
+		<property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView" />
+		<!-- Aonde se encontra as views -->
+
+		<!-- qual o tipo de pagina vou trabalha pode ser html, jsp, jsf etc... aqui especificamos qual vai ser -->
+
+	</bean>
+
+	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/tiles.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+
+	<!-- Configura o acesso para o banco de dados -->
+
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/test?useTimezone=true&amp;serverTimezone=UTC" />
+		<property name="username" value="carlos" />
+		<property name="password" value="carlos415263" />
+	</bean>
+
+
+	<!-- Configura a fabrica de conexoes -->
+
+
+	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+
+		<!-- faz o link para o datasource que configuramos -->
+
+		<property name="dataSource" ref="dataSource" />
+		<!-- mostra onde estão as classes que vamos usar -->
+
+		<property name="packagesToScan" value="br.com.startsl.springmvc.dominios"></property>
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+		</property>
+
+		<!-- 			são configurações do hibernate -->
+
+		<property name="jpaProperties">
+			<props>
+				<!-- 				dialeto, como vimos nas sim anteriores estemos usando o hibernate e MYSQL5 -->
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>						<!-- <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</prop> -->
+				<!-- 					mostra as atividades feita no banco de dados -->
+				<prop key="hibernate.show_sql">true</prop>
+				<!-- tem haver com a questão das tabelas estarem criadas, ou so atualizadas 
+		etc. -->
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+	</bean>
+
+
+	<!-- 		cuida das transações do banco de dados commit e rollback -->
+	
+	
+<!-- 	configura os repositorios -->
+	<jpa:repositories base-package="br.com.startsl.springmvc.repositorios"></jpa:repositories>
+	
+
+<!-- 	Incio da configuração do Spring Security -->
+
+	
+<!-- 	Configura as pagina como isentas de seguranca -->
+	<security:http pattern="/resource/**" security="none"></security:http>
+	
+	<security:http pattern="/home/login" security="none"></security:http>
+
+<!-- 	Restringe o acesso a pagina e limita que pode ver ou nao -->
+	<security:http use-expressions="true" auto-config="true">
+	
+	<security:intercept-url pattern="/**/adicionar" access="hasRole('ROLE_ADMIN')"/>
+	<security:intercept-url pattern="/**/alterar/**" access="hasRole('ROLE_ADMIN')"/>
+	<security:intercept-url pattern="/**/excluir/**" access="hasRole('ROLE_ADMIN')"/>
+	<security:intercept-url pattern="/**" access="isAuthenticated"/>
+<!-- 	Configura varias situações como pagina do login principal, pagina caso falhe a autenticação, pagina padrao etc -->
+<!-- 		pega os valores para setar os mesmo -->
+	<security:form-login login-page="/home/login"
+		default-target-url="/home/bemvindo"
+		authentication-failure-url="/home/login"
+		username-parameter="username"
+		password-parameter="password"		
+	/>
+	
+	<security:logout logout-success-url="/home/login" invalidate-session="true"/>
+	<security:csrf disabled="true"/>
+	</security:http>
+	
+	<bean id="userDetailsService" class="br.com.startsl.springmvc.security.SpringService" />
+	
+	<bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+		<constructor-arg value="11" />
+	</bean>
+	
+	
+<!-- 	Busca as informações jogando para as classes necessarias -->
+	<security:authentication-manager>
+		<security:authentication-provider user-service-ref="userDetailsService">
+		<security:password-encoder hash="bcrypt"></security:password-encoder>
+		</security:authentication-provider>
+	</security:authentication-manager>
+
+</beans>
